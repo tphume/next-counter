@@ -8,4 +8,4 @@ const counterSlice = createSlice({
   },
 })
 
-export const { reducer, actions } = counterSlice
+export const { reducer: counterReducer, actions: counterActions } = counterSlice
