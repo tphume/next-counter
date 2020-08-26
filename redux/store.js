@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { createWrapper } from "next-redux-wrapper";
@@ -19,6 +19,11 @@ const makeStore = ({ isServer }) => {
 
     const store = configureStore({
       reducer: persistedReducer,
+      middleware: getDefaultMiddleware({
+        serializableCheck: {
+          ignoredActions: ["persist/PERSIST"],
+        },
+      }),
     });
 
     store.__persistor = persistStore(store);
@@ -26,6 +31,6 @@ const makeStore = ({ isServer }) => {
   }
 };
 
-const wrapper = createWrapper(makeStore, { debug: true });
+const wrapper = createWrapper(makeStore, { debug: false });
 
 export default wrapper;
