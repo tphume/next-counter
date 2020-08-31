@@ -1,6 +1,4 @@
 import Head from "next/head";
-import { useSelector, useDispatch } from "react-redux";
-import { counterActions } from "../redux/counter";
 
 import { styled } from "@material-ui/styles";
 import styles from "../styles/Home.module.css";
@@ -10,33 +8,16 @@ const MarginButton = styled(Button)({
   marginTop: "0.5em",
 });
 
-export default function Counter() {
-  const dispatch = useDispatch();
-  const count = useSelector((state) => state.counter);
-
+export default function AsyncCounter() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Next Counter</title>
+        <title>Async Next Counter</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>{count}</h1>
-        <MarginButton
-          color="primary"
-          variant="contained"
-          onClick={() => dispatch(counterActions.increment())}
-        >
-          INCREASE
-        </MarginButton>
-        <MarginButton
-          color="secondary"
-          variant="outlined"
-          onClick={() => dispatch(counterActions.decrement())}
-        >
-          DECREASE
-        </MarginButton>
+        <h1>Page is empty for now</h1>
       </main>
 
       <footer className={styles.footer}>

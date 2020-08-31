@@ -6,7 +6,6 @@ export default class extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
-          <title>Next.js Counter</title>
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/apple-icon.png"></link>
         </Head>
