@@ -22,11 +22,12 @@ export default function AsyncCounter() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>{count}</h1>
+        <h1 className={styles.title}>{`Async Counter - ${count}`}</h1>
         <MarginButton
           color="primary"
           variant="contained"
           onClick={() => dispatch(increment())}
+          disabled={loading}
         >
           INCREASE
         </MarginButton>
@@ -34,6 +35,7 @@ export default function AsyncCounter() {
           color="secondary"
           variant="outlined"
           onClick={() => dispatch(decrement())}
+          disabled={loading}
         >
           DECREASE
         </MarginButton>

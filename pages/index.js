@@ -22,7 +22,7 @@ export default function Counter() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>{count}</h1>
+        <h1 className={styles.title}>{`Counter - ${count}`}</h1>
         <MarginButton
           color="primary"
           variant="contained"
