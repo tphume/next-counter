@@ -1,4 +1,6 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, {
+  Html, Head, Main, NextScript,
+} from 'next/document';
 
 export default class extends Document {
   render() {
@@ -7,7 +9,7 @@ export default class extends Document {
         <Head>
           <meta charSet="utf-8" />
           <link rel="manifest" href="/manifest.json" />
-          <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+          <link rel="apple-touch-icon" href="/apple-icon.png" />
         </Head>
         <body>
           <Main />

@@ -1,13 +1,13 @@
-import Head from "next/head";
-import { useSelector, useDispatch } from "react-redux";
-import { counterActions } from "../redux/counter";
+import Head from 'next/head';
+import { useSelector, useDispatch } from 'react-redux';
+import { styled } from '@material-ui/styles';
+import Button from '@material-ui/core/Button';
+import { counterActions } from '../redux/counter';
 
-import { styled } from "@material-ui/styles";
-import styles from "../styles/Home.module.css";
-import Button from "@material-ui/core/Button";
+import styles from '../styles/Home.module.css';
 
 const MarginButton = styled(Button)({
-  marginTop: "0.5em",
+  marginTop: '0.5em',
 });
 
 export default function Counter() {
@@ -45,7 +45,8 @@ export default function Counter() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
+          Powered by
+          {' '}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
